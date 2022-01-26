@@ -16,13 +16,13 @@ using namespace std;
 // строится последоватльность; тип генерируемых данных; тип сортировки
 
 const char * MENU_SEQUENCE_TYPE[] = {"Sequence type:",
-                                     "Отмена",
+                                     "Exit",
                                      "Linked List",
                                      "Array Sequence"};
 const int MENU_SEQUENCE_TYPE_SIZE = sizeof(MENU_SEQUENCE_TYPE) / sizeof(MENU_SEQUENCE_TYPE[0]);
 
 const char * SORT_TYPE[] = {"Sort type:",
-                            "Отмена",
+                            "Cancel",
                             "BubbleSort",
                             "ShakerSort",
                             "MergeSort",
@@ -31,7 +31,7 @@ const char * SORT_TYPE[] = {"Sort type:",
 const int SORT_TYPE_SIZE = sizeof(SORT_TYPE) / sizeof(SORT_TYPE[0]);
 
 const char * GENERATION_TYPE[] = {"Data type to generate:",
-                                  "Отмена",
+                                  "Cancel",
                                   "Sorted",
                                   "Reversed",
                                   "Random"};
@@ -68,6 +68,8 @@ int main(int argc, char *argv[]) {
             default:
                 break;
         }
+
+        if (SequenceType == 0) return 0;
 
         seq->Sequence<int>::~Sequence();
 
