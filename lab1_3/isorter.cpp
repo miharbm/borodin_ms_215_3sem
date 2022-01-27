@@ -79,7 +79,7 @@ template<typename T>
 void MergeSort<T>::merge(Sequence<T> *seq, int left, int split_index, int right, int (*cmp)(T, T)) {
     int position_first_seq = left;
     int position_second_seq = split_index + 1;
-    Sequence<T> *tmp = (Sequence<T> *) new ArraySequence<T>;
+    auto *tmp = (Sequence<T> *) new ArraySequence<T>;
 
     while (position_first_seq <= split_index && position_second_seq <= right) {
         if (cmp((*seq)[position_first_seq], (*seq)[position_second_seq]) < 0)

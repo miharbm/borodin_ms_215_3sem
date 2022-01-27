@@ -27,7 +27,7 @@ public:
     void Sort(Sequence<T> *seq, int (*cmp)(T, T));
 };
 
-// 9. Сортировка слиянием - 7
+// 3. Сортировка слиянием - 7
 template <typename T>
 class MergeSort : public ISorter<T> {
 public:
@@ -36,7 +36,7 @@ public:
     void merge(Sequence<T> *seq, int left, int split_index, int right, int (*cmp)(T, T));
 };
 
-// 10. Пирамидальная сортировка - 10
+// 4. Пирамидальная сортировка - 10
 template <typename T>
 class HeapSort : public ISorter<T> {
 public:
@@ -44,7 +44,7 @@ public:
     void Sort(Sequence<T> *seq, int (*cmp)(T, T));
 };
 
-// 11. Быстрая сортировка - 10
+// 5. Быстрая сортировка - 10
 template <typename T>
 class QuickSort : public ISorter<T> {
 public:

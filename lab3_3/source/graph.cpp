@@ -46,21 +46,6 @@ Node *Graph::GetVertex(int i) {
     return _graph.at(i);
 }
 
-/*
-vector<vector<bool> > Graph::GetMatrix() {      // получение матрицы смежности
-    vector<vector<bool>> matrix;
-    for (auto node : _graph) {
-        vector<bool> current_line(_graph.size());
-        for (int i = 0; i < _graph.size(); ++i) current_line.at(i) = 0;
-        for (auto arc : node->_outboundArcs) {
-            current_line.at(arc->_end->id) = 1;
-        }
-        matrix.push_back(current_line);
-    }
-    return matrix;
-}
-*/
-
 vector<vector<double>> Graph::GetMatrix() {      // получение матрицы смежности, если между вершинами есть ребро, то указывается его вес
     vector<vector<double>> matrix;
     for (auto node : _graph) {

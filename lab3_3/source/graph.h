@@ -6,7 +6,7 @@
 #include <cstring>
 #include <fstream>
 #include <algorithm>
-#include <time.h>
+#include <ctime>
 using namespace std;
 
 class Node;
@@ -36,7 +36,7 @@ public:
 
 class Graph {
 public:
-    bool _mode;                     // true - граф неориентированный, false - граф неориентированный
+    bool _mode;                     // true - граф ориентированный, false - граф неориентированный
     vector<Node*> _graph;
 
     Graph(bool mode = 1) {
